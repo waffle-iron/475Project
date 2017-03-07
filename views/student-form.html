@@ -45,7 +45,8 @@
 		</div>
 	</div>
 
-	<div ng-repeat="course in student.schedule track by $index">
+	<div class="form-group"><label>Student Schedule</label> - <span class="adder-link" ng-click="addCourse()">Add Course</span></div>
+	<div ng-repeat="course in student.schedule | orderBy: '-' track by $index">
 		<div class="row">
 			<div class="col-md-4">
 				<div class="form-group">
@@ -136,10 +137,8 @@
 		</div>
 	</div>
 
-	<div class="form-group"><label>Student Schedule</label> - <span class="adder-link" ng-click="addCourse()">Add Course</span></div>
-
 	<div class="form-group"><label>Student Grades</label> - <span class="adder-link" ng-click="addGrade()">Add Grade</span></div>
-	<div ng-repeat="grade in student.grades track by $index">
+	<div ng-repeat="grade in student.grades | orderBy: '-' track by $index">
 		<div class="row">
 			<div class="col-md-6">
 				<div class="form-group">
