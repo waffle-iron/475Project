@@ -44,7 +44,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr class="hoverable" ng-init="showExtraInfo = false" ng-click="showExtraInfo = !showExtraInfo" ng-repeat-start="student in students | filter:{first_name: firstName} | filter:{last_name: lastName} | filter:{tags: searchTags} | filter:showIsUndergrad track by student.firebaseId">
+    <tr class="hoverable" ng-init="showExtraInfo = false" ng-click="showExtraInfo = !showExtraInfo" ng-repeat-start="student in students | filter:{first_name: firstName} | filter:{last_name: lastName} | filter:{tags: searchTags} | filter:showIsUndergrad | orderBy: 'lastName' track by student.firebaseId">
       <td>{{student.first_name}}</td>
       <td>{{student.last_name}}</td>
       <td>{{student.email}}</td>
