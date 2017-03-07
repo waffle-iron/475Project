@@ -91,6 +91,7 @@ app.controller('addCourseCtrl', ['$scope', 'firebaseService', 'authService', fun
   $scope.submit = function() {
       if (areReqFieldsFilled()) {
         cleanUp();
+        $scope.course.courseID = $scope.course.courseID.toUpperCase();
 
         firebaseService.addCourse($scope.course, function(result) {
           toastr.success("Added Course");
