@@ -11,7 +11,7 @@ class Student {
   }
 
   addCourseTaking(course) {
-    this.schedule.push(course);
+    this.schedule.unshigft(course);
   }
 
   removeCourseTaking(idx) {
